@@ -23,13 +23,13 @@
                                 <input class="form-control" type="text" name="last_name" placeholder="Nama Belakang" value="<?= $user_data['lastName'] ?>" style="color: var(--bs-body-bg);background: var(--bs-gray-800);border-color: var(--bs-body-color);">
                             </div>
                             <div class="col-12 col-md-6" style="margin-bottom: 15px;">
-                                <input class="form-control" type="date" name="date_of_birth" value="<?= $user_data['dateOfBirth'] ?>" style="color: var(--bs-gray-100);background: var(--bs-gray-800);border-color: var(--bs-body-color);">
+                                <input class="form-control" type="date" name="date_of_birth" value="<?= isset($user_data['dateOfBirth']) ? $user_data['dateOfBirth'] : '' ?>" style="color: var(--bs-gray-100);background: var(--bs-gray-800);border-color: var(--bs-body-color);">
                             </div>
                             <div class="col-12 col-md-6" style="margin-bottom: 15px;">
                                 <select class="form-select" name="gender" style="color: var(--bs-gray-100);background: var(--bs-gray-800);border-color: var(--bs-body-color);">
-                                    <option value="male" <?= $user_data['gender'] == 'male' ? "selected" : ''; ?>>Laki-laki</option>
-                                    <option value="female" <?= $user_data['gender'] == 'female' ? "selected" : ''; ?>>Perempuan</option>
-                                    <option value="other" <?= $user_data['gender'] == 'other' ? "selected" : ''; ?>>Lainya</option>
+                                    <option value="male" <?= isset($user_data['gender']) && $user_data['gender'] == 'male' ? "selected" : ''; ?>>Laki-laki</option>
+                                    <option value="female" <?= isset($user_data['gender']) && $user_data['gender'] == 'female' ? "selected" : ''; ?>>Perempuan</option>
+                                    <option value="other" <?= isset($user_data['gender']) && $user_data['gender'] == 'other' ? "selected" : ''; ?>>Lainya</option>
                                 </select>
                             </div>
                             <div class="col-12" style="margin-bottom: 15px;">

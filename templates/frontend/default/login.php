@@ -15,9 +15,18 @@
                             <form action="<?= site_url('login/submit') ?>" method="POST" enctype="application/x-www-form-urlencoded">
                                 <fieldset>
                                     <div class="row">
-                                        <div class="col-12" style="margin-bottom: 10px;"><input class="form-control form-control-lg" type="email" placeholder="Email" name="email" autofocus="" style="background: var(--bs-gray-800);border-color: var(--bs-body-color);color: var(--bs-gray-100);"></div>
-                                        <div class="col-12" style="margin-bottom: 10px;"><input class="form-control form-control-lg" type="password" placeholder="Password" name="password" style="background: var(--bs-gray-800);border-color: var(--bs-body-color);color: var(--bs-gray-100);"></div>
-                                        <div class="col-12" style="margin-bottom: 10px;"><input class="form-control form-control-lg" type="password" placeholder="Secret Key" name="secret" style="background: var(--bs-gray-800);border-color: var(--bs-body-color);color: var(--bs-gray-100);"></div>
+                                        <div class="col-12" style="margin-bottom: 10px;">
+                                            <?= form_error('email') ?>
+                                            <input class="form-control form-control-lg" type="email" placeholder="Email" name="email" autofocus="" style="background: var(--bs-gray-800);border-color: var(--bs-body-color);color: var(--bs-gray-100);">
+                                        </div>
+                                        <div class="col-12" style="margin-bottom: 10px;">
+                                            <?= form_error('password') ?>
+                                            <input class="form-control form-control-lg" type="password" placeholder="Password" name="password" style="background: var(--bs-gray-800);border-color: var(--bs-body-color);color: var(--bs-gray-100);">
+                                        </div>
+                                        <div class="col-12" style="margin-bottom: 10px;">
+                                            <?= form_error('secret') ?>
+                                            <input class="form-control form-control-lg" type="password" placeholder="Secret Key" name="secret" style="background: var(--bs-gray-800);border-color: var(--bs-body-color);color: var(--bs-gray-100);">
+                                        </div>
                                     </div>
                                 </fieldset>
                                 <div style="margin-top: 40px;">
